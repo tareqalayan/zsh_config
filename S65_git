@@ -1,7 +1,7 @@
 export GIT_EDITOR=/usr/bin/vim
 
 ########### GIT ALIASES ##################
-alias gs="git status"
+alias gstatus="git status"
 alias gsl="git stash list"
 alias gsu="git submodule update --init"
 alias gd="git diff --color --ignore-space-at-eol"
