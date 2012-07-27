@@ -1,19 +1,9 @@
 if (ls --version | grep 'GNU coreutils') >/dev/null 2>&1; then
     alias ls='ls --color=auto'
 fi
-if which enqueue > /dev/null; then
-    alias nq=enqueue
-fi
 if which w3m > /dev/null; then
     alias html='w3m -T text/html'
     if which pbpaste > /dev/null; then
         alias phtml='pbpaste | w3m -T text/html'
     fi
-fi
-if which pbpaste > /dev/null; then
-    alias pghtml='pbpaste > /tmp/.paste.html ; open /tmp/.paste.html'
-fi
-
-if which youtube-dl > /dev/null; then
-    alias youtube-mp3='youtube-dl -t --extract-audio --audio-format mp3'
 fi
