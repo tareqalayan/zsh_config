@@ -1,9 +1,9 @@
 if (ls --version | grep 'GNU coreutils') >/dev/null 2>&1; then
     alias ls='ls --color=auto'
 fi
-if which w3m > /dev/null; then
-    alias html='w3m -T text/html'
-    if which pbpaste > /dev/null; then
-        alias phtml='pbpaste | w3m -T text/html'
-    fi
-fi
+
+################################ aliases ######################################
+alias la='ls -lahrt --color=auto'
+alias l='ls -l --color=auto'
+alias ..='cd ..'
+alias cdproj='cd ~/projects'
