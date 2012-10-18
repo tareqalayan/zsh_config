@@ -3,7 +3,6 @@ if (ls --version | grep 'GNU coreutils') >/dev/null 2>&1; then
 fi
 
 ################################ aliases ######################################
-alias la='ls -lahrt --color=auto'
+alias ll='ls -lhrta --color=auto'
 alias l='ls -l --color=auto'
 alias ..='cd ..'
-alias cdproj='cd ~/projects'
