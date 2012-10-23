@@ -3,6 +3,7 @@ if (ls --version | grep 'GNU coreutils') >/dev/null 2>&1; then
 fi
 
 ################################ aliases ######################################
-alias ll='ls -lhrta --color=auto'
+alias ll='ls -lhrt --color=auto'
+alias la='ls -lhrta --color=auto'
 alias l='ls -l --color=auto'
 alias ..='cd ..'
