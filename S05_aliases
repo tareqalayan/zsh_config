@@ -7,3 +7,33 @@ alias ll='ls -lhrt --color=auto'
 alias la='ls -lhrta --color=auto'
 alias l='ls -l --color=auto'
 alias ..='cd ..'
+# install colordiff package
+alias diff='colordiff'
+alias mount='mount | column -t'
+alias path='echo -e $(PATH//:/\\n)'
+alias now='date +"%T'
+alias nowdate='date +"%d-%m_%Y"'
+# vim as default
+alias vi='vim'
+alias svi='sudo vi'
+alias edit='vim'
+# ping
+alias ping='ping -c 5'
+# open ports
+alias ports='netstat -tulanp'
+# system memory, cpu usage, and gpu memory 
+## pass options to free ## 
+alias meminfo='free -m -l -t'
+ 
+## get top process eating memory
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+  
+## get top process eating cpu ##
+alias pscpu='ps auxf | sort -nr -k 3'
+alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
+   
+## Get server cpu info ##
+alias cpuinfo='lscpu'
+## get GPU ram on desktop / laptop## 
+alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
