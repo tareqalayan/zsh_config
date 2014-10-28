@@ -39,3 +39,6 @@ alias cpuinfo='lscpu'
 alias gpumeminfo='grep -i --color memory /var/log/Xorg.0.log'
 
 alias sshr='ssh -lroot'
+
+##
+alias mv="mv -i"
