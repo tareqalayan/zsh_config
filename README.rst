@@ -3,26 +3,36 @@ Introduction
 
 Installation
 ============
-Just copy .zshrc and .zsh.d to your home directory.
 
-NOTE TO MAC USERS
------------------
-If you want Ctrl+Backspace to work properly (triggering backward-kill-word), you will have to make your terminal send the proper sequence (the default is triggered by \e?, so for instance in iTerm you would make Ctrl-backspace send escape sequence '?').
+- You need to have zsh as your default shell.
+
+- Clone this repo
+
+- ln -s path/to/zsh_config ~/.zsh.d
+
+- On ~/.zshrc  add the following
+
+  ZSH_DIR="$HOME/.zsh.d"
+
+  for zshrc_snipplet in $ZSH_DIR/S* ; do
+    source $zshrc_snipplet
+  done
+
+- End
 
 Features
 ========
 
-General Shell Stuff
--------------------
-
-* Directory cycling: Ctrl+Shift-Left/Right cycles directories in the dirstack left or right
-* Ctrl+Shift+Up triggers 'cd ..'
-* Ctrl+P issues *popd*.
-
-
 Python
 ------
 
-* *virtualenvwrapper* integration -- shell starts in __global__ virtualenv by default.
 * cdpy: utility to *cd* into the directory holding the given package
 * mkpkg: shortcut for mkdir + touch __init__.py file
+
+Informative Git Status
+=======================
+
+A zsh prompt that displays information about the current git repository.
+In particular the branch name, difference with remote branch, number of files staged, changed, etc.
+
+(an original idea from this blog post).
