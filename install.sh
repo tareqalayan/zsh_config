@@ -19,9 +19,3 @@ if [ -e \$SITE_CUSTOM_FILE ]; then
     source \$SITE_CUSTOM_FILE
 fi
 EOF
-
-cd "$ZSH_DIR"/src
-for c_file in *.c; do
-	implicit_makefile="$(echo $c_file | sed -e 's/\.c$//')"
-	make "$implicit_makefile"
-done
