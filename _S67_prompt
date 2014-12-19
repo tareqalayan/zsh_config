@@ -3,7 +3,7 @@
 # vi-mode colour changing
 #   http://www.zsh.org/mla/users/2006/msg01196.html
 
-source $HOME/gitrepos/zsh_config/git-status/git_status_prompt.sh
+source $ZSH_DIR/git-status/git_status_prompt.sh
 
 rst="%{%b%s%u$reset_color%}"
 bgc="%{%(?.$rst.%S)%}"
